@@ -4,7 +4,7 @@ from odoo import models, fields
 
 class SchoolInfo(models.Model):
     _name = 'website.task'
-    _discription = 'Information about School'
+    _description = 'Information about School'
 
     school_name = fields.Text()
     country_id = fields.Many2one('res.country', string='Country')

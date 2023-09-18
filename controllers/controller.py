@@ -15,10 +15,10 @@ class SnippetTask(http.Controller):
         return schools
 
 
-class SignupLoginPage(http.Controller):
-    @http.route('/sign-up', type='http', auth='public', website=True)
-    def sign_up(self, **kw):
-        return request.render('website_task.signup_template')
+# class SignupLoginPage(http.Controller):
+#     @http.route('/sign-up', type='http', auth='public', website=True)
+#     def sign_up(self, **kw):
+#         return request.render('website_task.signup_template')
 
 
 class CustomWebpage(http.Controller):

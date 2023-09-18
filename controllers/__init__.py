@@ -1,1 +1,1 @@
-from . import snippet_task
+from . import controller
