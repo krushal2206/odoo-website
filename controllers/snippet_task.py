@@ -3,6 +3,7 @@ from odoo.http import request, Controller, route
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.http import Response
 import json
+from odoo.exceptions import UserError, ValidationError
 
 
 class SnippetTask(http.Controller):
@@ -14,9 +15,17 @@ class SnippetTask(http.Controller):
         return schools
 
 
+class SignupLoginPage(http.Controller):
+    @http.route('/sign-up', type='http', auth='public', website=True)
+    def sign_up(self, **kw):
+        return request.render('website_task.signup_template')
+
+
 class CustomWebpage(http.Controller):
     @http.route('/custom_page', type='http', auth="public", website=True)
     def create_form_data(self, **kw):
-        # Render your custom template
-        request.env['website.task'].sudo().create(kw)
-        return request.render('website_task.custom_template')
+        if (request.env.user.id == 4):
+            return request.render('website_task.signup_template')
+        else:
+            request.env['website.task'].sudo().create(kw)
+            return request.render('website_task.custom_template')

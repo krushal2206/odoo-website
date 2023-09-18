@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="website_task.signup_template" name="Signup Page">
+        <t t-call="website.layout">
+
+            <div class="container text-center mt-5 border p-4 shadow">
+                <h1>First, you should login!</h1>
+                <a href="/web/login" class="btn btn-primary btn-lg">Login</a>
+                <div class="mt-4">
+                    <iframe src="https://giphy.com/embed/EddY9gk1YkWAnImfKm" width="480"
+                        height="270" frameBorder="0" class="giphy-embed"></iframe>
+                    <p>
+                        <a href="https://giphy.com/gifs/welcome-login-new-comma-EddY9gk1YkWAnImfKm">via
+                            GIPHY</a>
+                    </p>
+                </div>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>
