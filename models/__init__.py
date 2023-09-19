@@ -1,1 +1,1 @@
-from . import website_task
+from . import school_info
