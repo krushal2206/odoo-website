@@ -1,10 +1,9 @@
-
 from odoo import models, fields
 
 
 class SchoolInfo(models.Model):
-    _name = 'website.task'
-    _description = 'Information about School'
+    _name = 'school.info'
+    _description = "All the Information about school"
 
     school_name = fields.Text()
     country_id = fields.Many2one('res.country', string='Country')

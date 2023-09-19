@@ -4,7 +4,7 @@
     <!-- tree view  -->
     <record id="website_list_view" model="ir.ui.view">
         <field name="name">website.list.view</field>
-        <field name="model">website.task</field>
+        <field name="model">school.info</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="school_name" />
@@ -19,7 +19,7 @@
     <!-- Form view  -->
     <record id="website_form_view" model="ir.ui.view">
         <field name="name">website.form.view</field>
-        <field name="model">website.task</field>
+        <field name="model">school.info</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -36,7 +36,7 @@
 
     <record id="action_website_profile" model="ir.actions.act_window">
         <field name="name">Website Task</field>
-        <field name="res_model">website.task</field>
+        <field name="res_model">school.info</field>
         <field name="view_mode">tree,form</field>
     </record>
 </odoo>

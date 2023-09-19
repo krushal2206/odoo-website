@@ -3,7 +3,7 @@
 import publicWidget from "web.public.widget";
 
 publicWidget.registry.SchoolInfo = publicWidget.Widget.extend({
-  selector: ".website.task",
+  selector: ".school.info",
   start() {
     let citiesRaw = this.el.querySelector("#info-website-task");
 
